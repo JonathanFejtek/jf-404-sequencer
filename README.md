@@ -1,6 +1,2 @@
-# Getting Started
-
-1. `git clone` this repo
-2. `npm install`
-3. enjoy!
+# My take on classic 90's drum machines:
 # jf-404-sequencer
