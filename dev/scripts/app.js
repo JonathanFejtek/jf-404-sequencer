@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SequenceCell from './sequence-cell';
 import SequenceTrack from './sequence-track';
-import {BufferLoader, BufferLoaderB,playSoundFromSource} from './sound-utils';
+import {BufferLoaderB,playSoundFromSource} from './sound-utils';
 import {LabelledTextInput, LabelledTextArea} from './text-inputs';
 import VariationManager from './variation-manager';
 import {SequencePreset, TrackCollection, DrumTrack} from './model';
