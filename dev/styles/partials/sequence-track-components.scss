@@ -140,6 +140,7 @@
         text-align : center;
         border-width : 2px;
         border-style : inset;
+        user-select : none;
     }
     
     .toggle-button{
@@ -148,6 +149,7 @@
         padding : 4px;
         background-color : rgb(179, 179, 179);
         border-width : 2px;
+        user-select : none;
        // margin : 0 auto;
     }
     

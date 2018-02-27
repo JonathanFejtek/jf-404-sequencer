@@ -280,7 +280,7 @@ class App extends React.Component {
                             className = "sign-in-button" 
                             onClick = {this.state.currentUserId === null ? this.signInUser : this.signOutUser}
                         >
-                            {this.state.currentUserId !== null ? "Log out" : "Sign in with Google"}
+                            {this.state.currentUserId !== null ? "Log out" : "Sign in"}
                         </button>
                     </div>
                 </div>
@@ -351,8 +351,8 @@ class App extends React.Component {
                         />
 
                         <div className="middle-button-controls">
-                            <button onClick = {this.newPattern}>Create New</button>
-                            <button onClick = {this.savePattern}>Store/Save</button>
+                            <button className = "edit-button" onClick = {this.newPattern}>Create New</button>
+                            <button className = "edit-button" onClick = {this.savePattern}>Store/Save</button>
                         </div>
                     </div>
                     {/* controls top middle end */}
