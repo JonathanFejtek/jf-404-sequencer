@@ -456,7 +456,6 @@ class App extends React.Component {
 
             // Get the signed-in user info.
             const user = result.user;
-            console.log(user.uid);
             self.setState({
                 currentUserId : user.uid, 
                 currentUserName : user.displayName}
@@ -464,7 +463,6 @@ class App extends React.Component {
 
             const dbRefP = firebase.database().ref(`/private/${user.uid}/patterns`);
             dbRefP.on('value', (response) => {
-                console.log(response.val());
                 if(response.val() !== null){
                     self.setState({privatePresets : response.val()});
                 }
@@ -496,7 +494,6 @@ class App extends React.Component {
         this.interval = setInterval(this.tick,30000/this.state.tempo);
         const dbRef = firebase.database().ref("/public/patterns");
         dbRef.on('value', (response) => {
-            console.log(response.val());
             if(response.val() !== null){
                 this.setState({publicPresets : response.val()});
             }
