@@ -13,10 +13,16 @@ let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
 window.bl2 = new BufferLoaderB(audioContext,{
     "Kick" : "kick.wav",
+    "Rim-shot" : "rim-shot.wav",
     "Snare" : "snare.wav",
+    "Short-snare" : "snare2.wav",
     "Clap" : "clap.wav",
     "Hat-closed" : "hat_closed.wav",
-    "Hat-open" : "open_hat.wav"
+    "Hat-open" : "open_hat.wav",
+    "Cowbell" : "cowbell.wav",
+    "Cymbol" : "cymbol.wav",
+    "Tom" : "tom.wav",
+    "Click" : "click.wav"
 });
   
 window.bl2.load();
@@ -82,10 +88,16 @@ class App extends React.Component {
 
         //initialize tracks
         this.state["tracks"]["Kick"] = new TrackCollection(32,4);
+        this.state["tracks"]["Rim-shot"] = new TrackCollection(32,4);
         this.state["tracks"]["Snare"] = new TrackCollection(32,4);
+        this.state["tracks"]["Short-snare"] = new TrackCollection(32,4);
         this.state["tracks"]["Clap"] = new TrackCollection(32,4);
         this.state["tracks"]["Hat-closed"] = new TrackCollection(32,4);
         this.state["tracks"]["Hat-open"] = new TrackCollection(32,4);
+        this.state["tracks"]["Cowbell"] = new TrackCollection(32,4);
+        this.state["tracks"]["Cymbol"] = new TrackCollection(32,4);
+        this.state["tracks"]["Tom"] = new TrackCollection(32,4);
+        this.state["tracks"]["Click"] = new TrackCollection(32,4);
 
 
         this.setState = this.setState.bind(this);
