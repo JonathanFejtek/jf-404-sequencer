@@ -1,0 +1,106 @@
+@mixin createVerticalSlider($sliderName,$sliderWidth,$sliderHeight,$thumbHeight,$sliderBackground,$progressColor,$thumbColor){
+
+    // create slider container style class
+    .#{$sliderName}-container{
+        position : relative;
+        width : $sliderWidth;
+        height : $sliderHeight;
+        display : block;
+        font-size : 0;
+        margin : auto;
+        margin-top : 5px;
+    }
+
+    .#{$sliderName}-label{
+        width : $sliderWidth;
+        border-style : solid;
+        border-width: 1px;
+        height : 20px;
+        color : black;
+        font-size : 12px;
+        display : inline-block;
+        padding : 2px;
+    }
+
+    // create range slider style class 
+    .#{$sliderName}{
+        -webkit-appearance: none;  
+        height: $sliderWidth; 
+        width: $sliderHeight;
+        border: solid rgba(0,0,0,0.3) 1px;
+        border-bottom: solid rgba(0,0,0,0.5) 1px;
+        border-left: solid rgba(0,0,0,0.5) 1px;
+
+        // rotate slider inside its container
+        -webkit-transform: rotate(90deg);
+        -webkit-transform-origin: top left;
+        position : absolute;
+        left : $sliderWidth;
+        overflow : hidden;
+        direction: rtl;
+    }
+
+    // chrome track style
+    .#{$sliderName}::-webkit-slider-runnable-track{
+        cursor: pointer;
+        background: $sliderBackground;
+        height : 100%;
+        border : none;       
+    }
+
+    // moz track style
+    .#{$sliderName}::-moz-range-track{
+        cursor: pointer;
+        background: $sliderBackground;
+        height : 100%;
+        border : none;        
+    }
+
+    // chrome thumb style
+    .#{$sliderName}::-webkit-slider-thumb{
+        -webkit-appearance: none;
+        border: 2px solid grey;
+        border-style : outset;
+        height: #{$sliderWidth - 2};
+        width: $thumbHeight;
+        border-radius: 2px;
+        background: $thumbColor;
+        box-shadow: #{$sliderHeight} 0px 0px #{$sliderHeight} $progressColor;
+        -webkit-box-shadow: #{$sliderHeight} 0px 0px #{$sliderHeight} $progressColor;
+        
+    }
+
+    // moz thumb style
+    .#{$sliderName}::-moz-range-thumb{
+        -webkit-appearance: none;
+        border: 1px solid #000000;
+        height: #{$sliderWidth - 2};
+        width: $thumbHeight;
+        border-radius: 2px;
+        background: $thumbColor;
+        box-shadow: #{$sliderHeight} 0px 0px #{$sliderHeight} $progressColor;
+        -webkit-box-shadow: #{$sliderHeight} 0px 0px #{$sliderHeight} $progressColor;
+    }
+}
+
+@mixin setupSliderDetails(){
+    .oslider-container{
+        display : inline-block;
+        margin-top : 1px;
+        margin-bottom : 1px;
+    }
+    
+    .oslider-triggered::-webkit-slider-thumb{
+        box-shadow : 120px 0px 0px 120px gold;
+        -webkit-box-shadow : 200px 0px 0px 200px gold;
+    }
+    
+    .oslider-triggered::-moz-range-thumb{
+        box-shadow : 120px 0px 0px 120px gold;
+        -webkit-box-shadow : 200px 0px 0px 200px gold;
+    }
+
+    .slider-hidden{
+        display: none;
+    }
+}

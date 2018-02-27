@@ -1,0 +1,43 @@
+@mixin setupUserLoginTitleArea(){
+    .title-header{
+        color : lightgrey;
+        font-style : italic;
+        font-size : 45px;
+        text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+        text-align : center;
+        -webkit-background-clip: text;
+           -moz-background-clip: text;
+                background-clip: text;    
+    }
+
+    .user-controls{
+        max-width : 1400px;
+        margin : auto;
+        background-color : rgb(92, 92, 92);
+        color : lightgrey;
+        display : flex;
+        justify-content : space-between;
+        align-items : center;
+        padding : 10px;
+        border-style : outset;
+        border-width : 2px;
+        background-image : linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../../app-pattern3.jpg") ;
+    }
+    
+    .sign-in-state{
+        @include redTextInput();
+        padding : 4px;
+        border-style : inset;
+        border-width : 2px;
+        min-width : 150px;
+        text-align : center;
+    }
+    
+    .sign-in-button{
+        border-style : outset;
+        border-width : 2px;
+        padding : 6px;
+        background-color : grey;
+        color : lightgrey;
+    }
+}

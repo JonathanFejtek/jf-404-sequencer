@@ -1,0 +1,265 @@
+@mixin setupControlsTop(){
+    .controls-top{
+        display : flex;
+        min-height : 25px;
+        max-width : 1400px;
+        margin : auto;
+    }
+}
+
+@mixin topControl(){
+    width : calc(1/3 * 100%);
+    border-style : outset;
+    border-width : 2px;
+    background-color : rgb(92, 92, 92);
+    background-image : linear-gradient(rgba(60, 60, 60,0.7),rgba(60, 60, 60,1)), url("../../app-pattern2.jpg") ;
+    background-size : cover;
+}
+
+@mixin setupTopLeftControls(){
+    .controls-top-left{
+        @include topControl();
+        padding : 2px;
+    }
+
+    .list-view-container{
+        border-style : inset;
+        border-width : 2px;
+        height : 210px;
+        overflow-y : scroll;
+        width : 95%;
+        margin : 0 auto;
+        @include redTextInput();
+    }
+    
+    .list-view-item{
+        border-style : dotted none dotted none;
+        border-width : 1px;
+        padding : 4px;
+        font-size : 18px;
+        margin-bottom: 1px;   
+    }
+    
+    .list-view-item:hover{
+        @include redTextInputFocus();
+    }
+    
+    .list-view-title{
+        border-style : solid;
+        border-width : 2px;
+        //background-color : lightgrey;
+        background-color : rgb(92, 92, 92);
+        border-style : outset;
+        padding : 4px;
+        width : 95%;
+        margin : 0 auto;
+        color : lightgrey;
+        margin-top : 4px;
+        margin-bottom : 1px;
+    }
+
+    .bank-mode-controls{
+        width : 95%;
+        margin : 0 auto;
+        margin-top : 4px;
+        margin-bottom : 4px;
+        display : flex;
+        align-items : center;
+        color : lightgrey;
+    
+        .bank-mode-radio{
+            margin-right : 10px;
+            display : flex;
+            align-items : center;
+        }
+    
+        input{
+            -webkit-appearance : none;
+            width : 12px;
+            height : 12px;
+            margin-right : 4px;
+            background-color : grey;
+            color : red;
+            position : relative;
+            pointer-events : all;
+            border-style : inset;
+            border-width : 1px;
+        }
+    
+        input:checked{
+            background-color : rgb(255, 0, 0);
+            box-shadow : 0px 0px 25px rgb(255, 138, 138);
+        }
+    }
+}
+
+@mixin setupTopMiddleControls(){
+    .controls-top-middle{
+        @include topControl();
+        padding-left : 4px;
+        padding-right : 4px;
+    }
+
+    .middle-text-input{
+        display : block;
+       // margin : 0 auto;
+        width : 98%;
+        border-style : inset;
+        border-width : 2px;
+        border-color : lightgrey;
+        background-color : rgb(153, 0, 0);
+        color : rgb(255, 138, 138);
+        text-shadow : 0px 0px 10px rgb(255, 138, 138);
+        padding : 4px;
+        @include redTextInput();
+    }
+    
+    .middle-text-input:focus{
+        outline : none;
+        box-shadow : 0px 0px 25px rgb(255, 138, 138);
+        color : rgb(250, 211, 84);
+        @include redTextInputFocus();
+    }
+    
+    .title-input{
+        font-size : 36px;
+    }
+    
+    .description-input{
+        font-size : 16px;
+    }
+    
+    .middle-info-area{
+        width : 100%;
+        margin : 0 auto;
+        margin : 4px;
+        margin-top :12px;
+        margin-bottom : 6px;
+    
+        h6{
+            color : lightgrey;
+        }
+    }
+    
+    .middle-button-controls button{
+        display : block;
+        padding : 6px;
+        margin : 4px;
+    }
+    
+    .middle-button-controls{
+        display : flex;
+        justify-content : center;
+        width : 100%;
+    } 
+}
+
+@mixin setupTopRightControls(){
+    .controls-top-right{
+        @include topControl();
+    }
+
+    .play-controls{
+        border-style : outset;
+        border-width : 2px;
+        display : flex;
+        justify-content : space-between;
+        font-size : 20px;
+        align-items : center;
+        padding : 4px;
+        background-color : rgb(60, 60, 60);
+    
+        button{
+            padding : 4px;
+            margin : 2px;
+        }
+    }
+    
+    .playback-button-toggled{
+        color : red;
+        text-shadow : 0px 0px 10px rgb(255, 138, 138);
+    }
+    
+    .variation-manager-container{
+        display : flex;
+        align-items : center;
+        border-style : outset;
+        border-width : 2px;
+        width : 250px;
+        margin : 0 auto;
+        margin-top : 4px;
+        background-color : rgb(92, 92, 92); 
+    }
+    
+    .variation-view{
+        padding : 4px;
+        width : 25%;
+        border-style : outset;
+        border-width : 3px;
+        margin : 4px;
+        text-transform : uppercase;
+        font-size : 32px;
+        background-color : grey;
+    }
+    
+    .variation-view:focus{
+        outline : none;
+    }
+    
+    .variation-view-toggled{
+        border-style : inset;
+        color : red;
+        text-shadow : 0px 0px 20px rgb(255, 85, 85);
+    }
+    
+    .order-manager-container{
+        min-height : 50px;
+        padding : 6px;
+    }
+    
+    .order-manager-controls-container{
+        display : flex;
+        justify-content : flex-start;
+    }
+    
+    .order-control{
+        font-size : 18px;
+        padding : 8px;
+        border-width : 2px;
+        background-color : grey;
+        border-style : outset;
+        margin : 2px;
+    }
+    
+    .order-control-toggled{
+        border-style : inset;
+        color : red;
+        text-shadow : 0px 0px 20px rgb(255, 85, 85);    
+    }
+    
+    .order-manager-slider-container{
+        overflow-x : scroll;
+        white-space: nowrap;
+        margin : 0 auto;
+        border-style : inset;
+        border-width : 2px;
+        max-width : 455px;
+    }
+
+    .bpm-label{
+        font-size : 32px;
+        color : lightgrey;
+    }
+    
+    .bpm-input{
+        padding : 2px;
+        font-size : 32px;
+        text-align : center;
+        @include redTextInput();
+        margin : 4px; 
+    }
+    
+    .bpm-input:focus{
+        @include redTextInputFocus();
+    }
+}

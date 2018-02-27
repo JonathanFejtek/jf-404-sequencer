@@ -1,0 +1,170 @@
+@mixin setupSequenceTrackComponents(){
+    .testC{
+        width : 90%;
+       // min-width : 25px;
+        height : 30px;
+        border-style : outset;
+        border-width : 1px 1px 3px 1px;
+        margin : auto;
+        margin-top : 2px;
+        margin-bottom : 2px;
+    
+    }
+    
+    .sequence-cell-container{
+        border-style : outset;
+        border-width : 2px;
+       // min-width : 39px;
+        width : calc(1/36 * (100%));
+        padding : 4px;
+        background-color :rgb(100,100,100);
+    }
+    
+    .cell-header{
+        text-align : center;
+        margin : 0 auto;
+        border-style : solid none none none;
+        border-width : 1px;
+        user-select : none;
+        color : rgb(241, 241, 241);
+        border-color :rgb(100,100,100);
+    }
+    
+    .fourthCell{
+        background-color :rgb(61, 61, 61);
+    }
+    
+    .fourthCell .cell-header{
+       border-style : solid;
+       border-color : rgb(241, 241, 241)
+    }
+    
+    .testCto{
+        // background-color : darkgrey;
+        border-style : inset;
+    }
+    
+    .sequence-button-light{
+        width : 80%;
+        height : 6px;
+        background-color : rgb(58, 58, 58);
+        margin : auto;
+        margin-top : 4px;
+        border-style : inset;
+        border-width : 1px;
+        position : relative;
+        transition : background-color 0.1s;
+    }
+    
+    .sequence-button-light::after{
+    }
+    
+    .sequence-button-light-triggered{
+        background-color : rgb(184, 37, 0);
+    }
+    
+    .sequence-button-light-toggled{
+        background-color : rgb(255, 51, 0);   
+    }
+    
+    .sequence-button-light-toggled::after{
+        content : '';
+        width : 150%;
+        height : 12px;
+        background-color : rgba(255, 51, 0,0.3);
+        box-shadow : 0px 0px 8px rgb(255, 51, 0);
+        position : absolute;
+        left : -22%;;
+        top : -2px;;
+    }
+    
+    .sequence-button-light-toggled-triggered{
+        background-color : rgb(250, 211, 84);
+    }
+    
+    .sequence-button-light-toggled-triggered::after{
+        content : '';
+        width : 150%;
+        height : 12px;
+        background-color : rgba(250, 211, 84,0.3);
+        box-shadow : 0px 0px 35px rgb(250, 211, 84);;
+        position : absolute;
+        left : -22%;;
+        top : -2px;;
+    }
+    
+    
+    
+    .testCtt{
+      //  background-color : blue;
+      border-style : inset;
+    }
+    
+    .fl{
+        float : left;
+    }
+    
+    .sequence-track-container{
+        // display : inline-flex;
+        display : flex;
+        width : 1400px;
+        flex-flow : row;   
+        border-style : inset;
+        border-width : 1px;
+        // margin-top : 2px;
+        // margin-bottom : 2px;
+    }
+    
+    .sequencer-container{
+        overflow-x : scroll;
+        margin : auto;
+        border-style : solid;
+        border-width : 2px;
+        overflow-x : scroll;
+        max-width : 1400px; 
+        border-style : outset;   
+    }
+    
+    .sequence-track-label{
+        background-color : grey;
+        color : white;
+        padding : 4px;
+        width : calc(4/36 * 100%);
+        border-style : outset;
+        border-width : 2px;
+    }
+    
+    .sequence-track-label-header{
+        @include redTextInput();
+        padding : 2px;
+        text-align : center;
+        border-width : 2px;
+        border-style : inset;
+    }
+    
+    .toggle-button{
+        border-style : outset;
+        margin : 2px;
+        padding : 4px;
+        background-color : rgb(179, 179, 179);
+        border-width : 2px;
+       // margin : 0 auto;
+    }
+    
+    .toggle-button:focus{
+        outline : none;
+    }
+    
+    .show-pitch-toggled{
+        color : red;
+        text-shadow : 0px 0px 10px rgb(255, 133, 133);
+        border-style : inset;
+    }
+    
+    .show-volume-toggled{
+        color : rgb(255, 217, 2);
+        text-shadow : 0px 0px 10px rgb(255, 238, 142);
+        border-style : inset;
+    }
+}
+
